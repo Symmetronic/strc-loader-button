@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Symmetronic Loader Button</title>
+
+  <script type="module" src="/build/strc-loader-button.esm.js"></script>
+  <script nomodule src="/build/strc-loader-button.js"></script>
+
+  <style>
+    strc-loader-button {
+      --strc-loader-button-color: gray;
+      --strc-loader-button-duration: 0.75s;
+    }
+  </style>
+  <script>
+    function load() {
+      let loaderButton = document.querySelector('strc-loader-button');
+      loaderButton.setAttribute('loading', true);
+
+      setTimeout(loaded, 2000);
+    }
+
+    function loaded() {
+      let loaderButton = document.querySelector('strc-loader-button');
+      loaderButton.setAttribute('loading', false);
+    }
+  </script>
+</head>
+<body>
+
+  <strc-loader-button
+    disabled='false'
+    loading='false'
+    loadingLabel='Loading...'
+    type='button'
+    onClick='load();'
+  >
+    Click me!
+  </strc-loader-button>
+
+</body>
+</html>

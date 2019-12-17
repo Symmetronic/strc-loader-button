@@ -1,0 +1,53 @@
+/*
+ * Variables.
+ */
+$color: #616161;
+$duration: 0.75s;
+
+/*
+ * Animations.
+ */
+@keyframes spin {
+  from { transform: rotate(330deg); }
+  to { transform: rotate(690deg); }
+}
+
+/*
+ * Styles.
+ */
+strc-loader-button {
+  button {    
+    .loader {
+      color: $color;
+      color: var(--strc-loader-button-color, $color);
+      display: none;
+
+      svg {
+        fill: $color;
+        fill: var(--strc-loader-button-color, $color);
+        height: 1em;
+        margin-right: 0.2em;
+        stroke: none;
+        width: auto;
+
+        &.spin {
+          animation-name: spin;
+          animation-duration: $duration;
+          animation-duration: var(--strc-loader-button-duration, $duration);
+          animation-iteration-count: infinite;
+          animation-timing-function: ease;
+        }
+      }
+    }
+
+    &.loading {
+      .content {
+        display: none;
+      }
+
+      .loader {
+        display: inline-block;
+      }
+    }
+  }
+}
