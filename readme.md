@@ -8,7 +8,7 @@ A simple button with a loading state. This comes in handy if you like to notify 
 
 ### Script tag
 
-- Put the following script tag `<script src='https://unpkg.com/strc-loader-button@1.0.0/dist/strc-loader-button.js'></script>` in the head of your index.html
+- Put the following script tag `<script src='https://unpkg.com/strc-loader-button@1.0.1/dist/strc-loader-button.js'></script>` in the head of your index.html
 - Then you can use the element anywhere in your template, JSX, HTML, etc.
 
 ### Node Modules
@@ -20,7 +20,7 @@ A simple button with a loading state. This comes in handy if you like to notify 
 ### In a stencil-starter app
 
 - Run `npm install strc-loader-button --save`
-- Add an import to the npm packages `import strc-loader-button;`
+- Add an import to the npm packages `import 'strc-loader-button';`
 - Then you can use the element anywhere in your template, JSX, HTML, etc.
 
 ## API
